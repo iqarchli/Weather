@@ -1,6 +1,6 @@
 (function () {
 	var app = angular.module('WeatherApp', []);
-    app.controller('FirstCtrl', function($scope,getcitynameservice) {
+    app.controller('FirstCtrl', function($scope,getcitynameservice, getweatherservice) {
         
 
          		$scope.remaining = 3;
@@ -31,7 +31,7 @@
 
 
 
-		    				/*	getweatherservice.getweather($scope.latitude,$scope.longitude).then(function (d) {
+		    					getweatherservice.getweather($scope.latitude,$scope.longitude).then(function (d) {
 
 				            
 				            		$scope.weather = d.data;
@@ -40,7 +40,7 @@
 				        		},  function (error) {
 
 				            	alert('Error!');
-				        		}); */ 
+				        		}); 
 
 
 
@@ -63,9 +63,9 @@
 
     			}
 
-    			/* $scope.getweather = function(){
+    			 $scope.getweather = function(){
     				$scope.xxx = $scope.weather
-    			} */
+    			} 
 
 
 			/* $scope.showPosition = function (position) {
